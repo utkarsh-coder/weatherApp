@@ -6,7 +6,7 @@ const updateUI = (data) => {
     const weather = data.cityWeather;
 
     document.getElementById("location").innerHTML = cityDetails.EnglishName;
-    document.getElementById("temp").innerHTML = weather.Temperature.Metric.Value;
+    document.getElementById("temp").innerHTML = weather.Temperature.Metric.Value + "    &#176;" +weather.Temperature.Metric.Unit;
     console.log(weather.IsDayTime);
 
     if(weather.IsDayTime){
